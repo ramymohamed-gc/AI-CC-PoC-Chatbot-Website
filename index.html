@@ -23,7 +23,9 @@
 
         header {
             width: 100%;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers the header text */
             padding: 20px 0;
             background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
         }
@@ -52,13 +54,28 @@
         }
 
         iframe {
-            width: 30%; /* Sets the width to 30% of the viewport for the chatbot */
-            height: 80%; /* Sets the height to 80% of the viewport */
+            width: 26%; /* Sets the width to 30% of the viewport for the chatbot */
+            height: 95%; /* Sets the height to 80% of the viewport */
             border: none;
             background-color: rgba(255, 255, 255, 0.9); /* Adds a slight white background to iframe */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds shadow around the iframe */
-            margin-right: 50px; /* Adds space between the chatbot and the right edge */
+            margin-right: 302px; /* Adds space between the chatbot and the right edge */
             border-radius: 8px; /* Slightly round the corners of the chatbot box */
+        }
+
+        /* Logo positioning in the bottom left */
+        .logo-container {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: rgb(255, 255, 255); /* Transparent white background */
+            padding: 5px;
+            border-radius: 20px; /* Optional: Rounds the background container */
+        }
+
+        .logo-container img {
+            width: 190px; /* Set logo size */
+            height: 45px;
         }
     </style>
 </head>
@@ -76,6 +93,11 @@
         </div>
 
         <iframe src="https://copilotstudio.microsoft.com/environments/9906b3a8-5ee8-eedc-a9b1-dce9c78c1ff3/bots/cr15d_aiCcPoCChatbot/webchat?__version__=2" frameborder="0"></iframe>
+    </div>
+
+    <!-- Logo container in the bottom left -->
+    <div class="logo-container">
+        <img src="images/GC Logo.png" alt="Logo"> <!-- Replace with the actual path to your logo image -->
     </div>
 </body>
 </html>
