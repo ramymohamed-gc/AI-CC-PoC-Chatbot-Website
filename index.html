@@ -13,23 +13,69 @@
             height: 100%;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Align items in column for header and content */
             background-image: url('images/background.jpg'); /* Path to your background image */
-            background-size: cover; /* This ensures the image covers the entire background */
+            background-size: cover; /* Ensures the image covers the entire background */
             background-position: center; /* Centers the background image */
             background-repeat: no-repeat; /* Ensures the image does not repeat */
+            color: white; /* Sets the text color to white */
         }
-        iframe {
+
+        header {
             width: 100%;
-            height: 80%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            flex: 1; /* Fills remaining space after header */
+            display: flex;
+            justify-content: space-between; /* Space between text and chatbot */
+            align-items: center;
+        }
+
+        .text-container {
+            margin-left: 100px; /* Adjust as needed */
+            max-width: 40%;
+            text-align: left;
+        }
+
+        .text-container h2 {
+            margin: 0 0 20px;
+            line-height: 1.4;
+        }
+
+        iframe {
+            width: 30%; /* Sets the width to 30% of the viewport for the chatbot */
+            height: 80%; /* Sets the height to 80% of the viewport */
             border: none;
             background-color: rgba(255, 255, 255, 0.9); /* Adds a slight white background to iframe */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds shadow around the iframe */
+            margin-right: 50px; /* Adds space between the chatbot and the right edge */
+            border-radius: 8px; /* Slightly round the corners of the chatbot box */
         }
     </style>
 </head>
 <body>
-    <iframe src="https://copilotstudio.microsoft.com/environments/9906b3a8-5ee8-eedc-a9b1-dce9c78c1ff3/bots/cr15d_aiCcPoCChatbot/webchat?__version__=2" frameborder="0"></iframe>
+    <!-- Header section for Shared Services Canada text -->
+    <header>
+        <h1>Shared Services Canada | Services partagés Canada</h1>
+    </header>
+
+    <!-- Main content section for text and chatbot -->
+    <div class="content">
+        <div class="text-container">
+            <h2>Artificial Intelligence for Contact Center</h2>
+            <h2>L’intelligence artificielle au service du centre de contact</h2>
+        </div>
+
+        <iframe src="https://copilotstudio.microsoft.com/environments/9906b3a8-5ee8-eedc-a9b1-dce9c78c1ff3/bots/cr15d_aiCcPoCChatbot/webchat?__version__=2" frameborder="0"></iframe>
+    </div>
 </body>
 </html>
